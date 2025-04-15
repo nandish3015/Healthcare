@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriScan - Smart Food Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NutriScan</h1>
+        <p>Scan nutrition labels to meet your dietary goals</p>
+    </header>
+
+    <main>
+        <!-- User Profile Section -->
+        <section id="profile">
+            <h2>Your Dietary Profile</h2>
+            <form id="profile-form">
+                <label for="max-calories">Max Daily Calories:</label>
+                <input type="number" id="max-calories" value="2000" required><br>
+                <label for="max-sugar">Max Daily Sugar (g):</label>
+                <input type="number" id="max-sugar" value="50" required><br>
+                <label for="allergens">Allergens (comma-separated):</label>
+                <input type="text" id="allergens" placeholder="e.g., peanuts, gluten"><br>
+                <button type="submit">Save Profile</button>
+            </form>
+        </section>
+
+        <!-- Scan Section -->
+        <section id="scan">
+            <h2>Scan a Label</h2>
+            <div id="upload-area" class="upload-area">
+                <p>Drag & drop an image or click to upload</p>
+                <input type="file" id="image-upload" accept="image/*" hidden>
+            </div>
+            <button id="scan-button" disabled>Scan Now</button>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" hidden>
+            <h2>Scan Results</h2>
+            <div id="score" class="score"></div>
+            <h3>Nutrition</h3>
+            <ul id="nutrition"></ul>
+            <h3>Ingredients</h3>
+            <ul id="ingredients"></ul>
+            <h3>Analysis</h3>
+            <p><strong>Warnings:</strong> <span id="warnings"></span></p>
+            <p><strong>Suggestions:</strong> <span id="suggestions"></span></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
