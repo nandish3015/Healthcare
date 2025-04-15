@@ -162,4 +162,4 @@ NutriScan empowers users to take control of their health without judgment. It’
 
 ---
 
-Would you like me to refine any aspect (e.g., technical details, app UI, or monetization)? Or perhaps visualize a prototype sketch of the device?
+
